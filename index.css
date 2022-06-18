@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 10px;
+}
+.outer {
+    width: 100%;
+    height: 92.2rem;
+    background-image: linear-gradient(to bottom right, #0F2027 ,#203A43, #2C5364);
+}
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:nowrap;
+    width: 100%;
+    height: 8.6%;
+    border-bottom: wheat 1px solid;
+    box-shadow: #1cb0e2 1px 1px 1px;
+    font-size: 2rem;
+    color: aliceblue;
+    font-weight: 700;
+}
+.nav a :hover {
+    cursor: pointer;
+    animation: jelly 0.5s;
+}
+/* Button animation */
+@keyframes jelly {
+
+    0%,
+    100% {
+        transform: scale(1, 1);
+    }
+
+    33% {
+        transform: scale(0.9, 1.1);
+    }
+
+    66% {
+        transform: scale(1.1, 0.9);
+    }
+}
+
+@keyframes jelly {
+
+    0%,
+    100% {
+        transform: scale(1, 1);
+    }
+
+    25%,
+    75% {
+        transform: scale(.95, 1.1);
+    }
+
+    50% {
+        transform: scale(1.1, 0.9);
+    }
+}
+
+.nav-TabLf {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    height: 6rem;
+}
+.nav-TabLf a:hover {
+    color: #1cb0e2;
+    font-size: 2.7rem;
+}
+.nav-TabLf li {
+    text-align: center;
+    width: 10%;
+    height: 6rem;
+    line-height: 6rem;
+    list-style: none;
+}
+.nav-TabLf li a {
+    text-decoration: none;
+    color: #eef4f6;
+}
+.Tablogo img {
+    width: 5rem;
+    height: 5rem;
+}
+.nav-TabRt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 29%;
+    height: 6rem;
+}
+.nav-TabRt li {
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
+    width: 10%;
+    height: 6rem;
+    line-height: 6rem;
+    list-style: none;
+}
+.nav-TabRt li img {
+    display: block;
+    width: 70%;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Solving clearance problems */
+    align-content: flex-start;
+    width: 100%;
+    height: 70%;
+}
+.cnt-Logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 15rem;
+    width: 50%;
+    height: 50%;
+}
+.cntTop {
+    width: 70%;
+    height: 30%;
+}
+.cntTop h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    line-height: 20rem;
+    background-image: -webkit-linear-gradient(top,rgb(235, 235, 225),rgba(18, 161, 80, 0.7));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 0 2px#1cb0e2;
+}
+
+.Avatar {
+    display: flex;
+    justify-content: center;
+    width: 55%;
+    height: 100%;
+}
+.Avatar img {
+    width: 57%;
+    height: 100%;
+    border-radius: 5rem;
+    border: #1cb0e2 1rem solid;
+}
