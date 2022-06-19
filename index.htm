@@ -4,44 +4,90 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cooks who can write code</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./index.css" type="text/css" />
   </head>
   <body>
     <div class="outer">
-      <div class="nav">
-        <ul class="nav-TabLf">
-          <li class="Tablogo">
+      <div class="navTab">
+        <!-- tab lift -->
+        <div class="TabLf">
+          <div class="tab-Logo">
             <img src="./images/cooking-ga5932c2af_640.png" alt="" />
-          </li>
-          <li><a href="">Home</a></li>
-          <li><a href="">Docn</a></li>
-          <li><a href="">Information</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Social</a></li>
-        </ul>
-        <ul class="nav-TabRt">
-          <li>
-            <a href=""><img src="./images/Twitter.png" alt="" /></a>
-          </li>
-          <li>
-            <a href=""><img src="./images/Discord.png" alt="" /></a>
-          </li>
-          <li>
-            <a href=""><img src="./images/youtube-96.png" alt="" /></a>
-          </li>
-        </ul>
+          </div>
+          <div class="tab-item active">Home</div>
+          <div class="tab-item">Preface</div>
+          <div class="tab-item">Route</div>
+          <div class="tab-item">Program</div>
+          <div class="tab-item">Demo</div>
+        </div>
+        <!--tab right  -->
+        <div class="TabRt">
+          <a href=""><img src="./images/Twitter.png" alt="" /></a>
+          <a href=""><img src="./images/Discord.png" alt="" /></a>
+          <a href=""><img src="./images/youtube-96.png" alt="" /></a>
+        </div>
       </div>
-      <div class="content">
-        <div class="cnt-Logo">
-          <div class="Avatar">
+      <!-- content -->
+      <div class="conTent">
+        <div class="conText active">
+          <div class="oneLife">
             <img src="./images/777.jpg" alt="" />
           </div>
+          <div class="oneRight">
+            <h1>没有人可以单靠想象就获得成果</h1>
+            <h1>如果你不是富二代，也不会有真正意义上的不劳而获</h1>
+            <h1>再困难的问题除以365都很简单</h1>
+            <h1>在我的观念中，只有想与不想，没有能与不能</h1>
+            <h1>任何形式上的突破，完全取决于你想要的程度</h1>
+            <h1>0 Basic challenge 100 days Web3 Study</h1>
+            <div class="Slogan">
+              <h1>厨子</h1>
+            </div>
+            <div class="show">
+              <h1>写代码的</h1>
+            </div>
+          </div>
         </div>
-        <div class="cntTop">
-          <h1>Haven't thought of what to put in the content</h1>
+        <div class="conText">
+          <div class="twoContent">
+            <div>
+              <h1>能力有限，不参与任何项目开发</h1>
+              <h1>网站与发表内容仅供学习交流使用，均为正常学术交流</h1>
+              <h1>
+                学习初衷为养成良好的学习编程习惯，因为编程是需要不断更新知识体系与技术栈的
+              </h1>
+              <h1>太多的小伙伴想法是好的，但迟迟不能有行动</h1>
+              <h1>任何不能落地实践的想法也只能称之为想法</h1>
+              <h1>希望大家共同进步，一起内卷 = =</h1>
+            </div>
+          </div>
         </div>
+        <div class="conText">Coming soon</div>
+        <div class="conText">Coming soon</div>
+        <div class="conText">Coming soon</div>
       </div>
+      <!-- footer -->
+      <div class="footer"></div>
     </div>
+    <script>
+      // 获取tab元素
+      let tbtn = document.querySelectorAll(".tab-item");
+      // 获取内容区元素
+      let cbox = document.querySelectorAll(".conText");
+      // 循环数组
+      for (let i = 0; i < tbtn.length; i++) {
+        tbtn[i].addEventListener("click", function () {
+          // 删除tab元素状态
+          document.querySelector(".navTab .active").classList.remove("active");
+          // 为this指向的元素追加状态
+          this.classList.add("active");
+          // 排他其它内容模块
+          document.querySelector(".conTent .active").classList.remove("active");
+          cbox[i].classList.add("active");
+        });
+      }
+    </script>
   </body>
 </html>
+
