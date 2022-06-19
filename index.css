@@ -1,33 +1,93 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 html {
     font-size: 10px;
 }
+body {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right  bottom, #0f0c29, #302b63,#24243e);
+}
+/* Scroll bar */
+html::-webkit-scrollbar {
+    width: 10px; 
+}
+
+html::-webkit-scrollbar-track {
+background-color: #0f0c29;
+}
+
+html::-webkit-scrollbar-thumb {
+background: #302b63;
+border-radius: 3rem;
+}
+/* Outer box */
 .outer {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     height: 93.7rem;
-    background-image: linear-gradient(to bottom right, #0F2027 ,#203A43, #2C5364);
 }
-.nav {
+/* Head Area */
+.navTab {
+    display: flex;
+    width: 100%;
+    height: 8%;
+    border-bottom: rgb(3, 57, 108) 1px solid;
+    box-shadow: .1rem .2rem .5rem rgb(2, 15, 87);
+}
+/* Tab  life*/
+.TabLf {
     display: flex;
     align-items: center;
+    width: 70%;
+    height: 100%;
+}
+/* tab logo */
+.tab-Logo img {
+    margin-left: 5rem;
+    width: 7rem;
+}
+/* tab button */
+.tab-item {
+    display: flex;
     justify-content: center;
-    flex-wrap:nowrap;
-    width: 100%;
-    height: 8.6%;
-    border-bottom: wheat 1px solid;
-    box-shadow: #1cb0e2 1px 1px 1px;
+    align-items: center;
+    margin: 3.5rem;
+    width: 7%;
+    height: 90%;
     font-size: 2rem;
-    color: aliceblue;
+    color: whitesmoke;
     font-weight: 700;
 }
-.nav a :hover {
+.tab-item:hover{
+    cursor:pointer
+}
+.tab-item.active {
+    font-size: 2.5rem;
+    color: #867cf6;
+    border-bottom: .35rem solid white;
+}
+/* Social Media */
+.TabRt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 29%;
+    height: 100%;
+}
+.TabRt img {
+    display: block;
+    width: 39%;
+}
+.TabRt a:hover {
     cursor: pointer;
     animation: jelly 0.5s;
 }
-/* Button animation */
+/* 按钮动画 */
 @keyframes jelly {
 
     0%,
@@ -61,90 +121,150 @@ html {
     }
 }
 
-.nav-TabLf {
+/* Content Containers */
+.conTent {
     display: flex;
-    align-items: center;
-    width: 70%;
-    height: 6rem;
-}
-.nav-TabLf a:hover {
-    color: #1cb0e2;
-    font-size: 2.7rem;
-}
-.nav-TabLf li {
-    text-align: center;
-    width: 10%;
-    height: 6rem;
-    line-height: 6rem;
-    list-style: none;
-}
-.nav-TabLf li a {
-    text-decoration: none;
-    color: #eef4f6;
-}
-.Tablogo img {
-    width: 5rem;
-    height: 5rem;
-}
-.nav-TabRt {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 29%;
-    height: 6rem;
-}
-.nav-TabRt li {
-    display: flex;
-    align-items: center;
-    margin: 0 1rem;
-    width: 10%;
-    height: 6rem;
-    line-height: 6rem;
-    list-style: none;
-}
-.nav-TabRt li img {
-    display: block;
-    width: 70%;
-}
-.content {
-    display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    /* Solving clearance problems */
-    align-content: flex-start;
-    width: 100%;
-    height: 93%;
-}
-.cnt-Logo {
-    display: flex;
     justify-content: center;
-    margin-top: 15rem;
+    align-items: center;
+    width: 100%;
+    height: 92%;
+    overflow: auto;
+}
+/* Scroll bar */
+.conTent::-webkit-scrollbar {
+    width: 10px; 
+}
+
+.conTent::-webkit-scrollbar-track {
+background-color: #0f0c29;
+}
+
+.conTent::-webkit-scrollbar-thumb {
+background: #302b63;
+border-radius: 3rem;
+}
+
+/* Content Nodes */
+.conText {
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    color: antiquewhite;
+}
+.conTent .conText {
+    display: none;
+    
+}
+.conTent .conText.active {
+    display:flex;
+}
+/* Content First Edition */
+.oneLife {
+    display: flex;
+    justify-content: flex-end;
+    width: 30%;
+    height: 60%;
+}
+.oneLife img{
+    display: block;
+    border-radius: 2.5rem;
+    border: #0f0c29 .3rem solid;
+    box-shadow: 1rem 1rem 5rem #bfbec6;
+}
+.oneRight{
     width: 50%;
     height: 50%;
 }
-.cntTop {
-    width: 70%;
-    height: 30%;
+.oneRight h1 {
+    width: 100%;
+    height: 15%;
+    font-size: 2.5rem;
+    text-shadow: 1rem 1rem 10rem #867cf6;
 }
-.cntTop h1 {
-    text-align: center;
-    font-size: 3.5rem;
-    line-height: 20rem;
-    background-image: -webkit-linear-gradient(top,rgb(235, 235, 225),rgba(18, 161, 80, 0.7));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 1px 0 2px#1cb0e2;
+.Slogan h1{
+    margin-top: 10rem;
+    text-align: right;
+    width: 100%;
+    height: 50%;
+    line-height: 17rem;
+    font-size:35rem;
+    text-shadow: 10rem 1rem 15rem #867cf6;
 }
-
-.Avatar {
+.show h1 {
+    font-size: 10rem;
+    color: #302b63;
+    text-shadow: 1rem 1rem 10rem #867cf6;
+}
+/* content节点2 */
+.twoContent {
     display: flex;
     justify-content: center;
-    width: 55%;
+    align-items: center;
+    width: 100%;
     height: 100%;
 }
-.Avatar img {
-    width: 57%;
-    height: 100%;
-    border-radius: 5rem;
-    border: #1cb0e2 1rem solid;
+.twoContent div h1 {
+    margin-top: 5rem;
+    line-height: 3rem;
+    text-align: center;
+    text-shadow: 1rem 1rem 3rem #867cf6;
+    font-size: 2.7rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+.footer{
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
